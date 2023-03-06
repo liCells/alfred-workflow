@@ -1,6 +1,6 @@
 # Notion AI
 
-The Alfred workflow used to call Notion AI, the final result will be saved to the clipboard.
+The Alfred workflow used to call Notion AI, the final result will be saved to the clipboard, inspired by https://github.com/jyz0309/NotionAI-go
 
 ## usage
 
