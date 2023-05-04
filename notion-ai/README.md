@@ -6,6 +6,8 @@
 
 ![img](https://raw.githubusercontent.com/liCells/alfred-workflow/main/notion-ai/usage.png)
 
+![img](https://raw.githubusercontent.com/liCells/alfred-workflow/main/notion-ai/example.png)
+
 ## Workflow Variables
 
 - `token`: Needed for your Notion token.
