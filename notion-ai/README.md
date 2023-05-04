@@ -6,7 +6,7 @@
 
 ![img](https://raw.githubusercontent.com/liCells/alfred-workflow/main/notion-ai/usage.png)
 
-![img](https://raw.githubusercontent.com/liCells/alfred-workflow/main/notion-ai/example.png)
+![img](https://github.com/liCells/alfred-workflow/blob/main/notion-ai/example.gif)
 
 ## Workflow Variables
 
