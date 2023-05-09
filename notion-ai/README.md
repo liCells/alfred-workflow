@@ -1,6 +1,6 @@
 # Notion AI
 
-[The Alfred workflow](https://github.com/liCells/notion-ai-go) used to call Notion AI, the final result will be saved to the clipboard, inspired by https://github.com/jyz0309/NotionAI-go
+[The Alfred workflow](https://github.com/liCells/notion-ai-go) used to call Notion AI, the final result will be typed into the input box, inspired by https://github.com/jyz0309/NotionAI-go
 
 ## usage
 
