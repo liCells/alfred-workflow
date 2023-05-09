@@ -4,9 +4,15 @@
 
 ## usage
 
+- ai draft
+- ai translate into chinese
+- ai translate into english
+- ai continue
+- `shift + control + c` : Forced stop
+
 ![img](https://raw.githubusercontent.com/liCells/alfred-workflow/main/notion-ai/usage.png)
 
-![img](https://github.com/liCells/alfred-workflow/blob/main/notion-ai/example.gif)
+![img](https://github.com/liCells/alfred-workflow/blob/main/notion-ai/example.gif?raw=true)
 
 ## Workflow Variables
 
