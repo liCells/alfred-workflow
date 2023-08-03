@@ -12,6 +12,6 @@
 
 > Switch audio devices quickly.
 
-### [Switch Audio](https://github.com/liCells/alfred-workflow/tree/main/ip-address)
+### [IP address](https://github.com/liCells/alfred-workflow/tree/main/ip-address)
 
 > Get ip address quickly.
