@@ -15,3 +15,7 @@
 ### [IP address](https://github.com/liCells/alfred-workflow/tree/main/ip-address)
 
 > Get ip address quickly.
+
+### [Tencent Meeting Tool](https://github.com/liCells/alfred-workflow/tree/main/Tencent-Meeting-Tool)
+
+> Quick operation of Tencent meetings.
