@@ -48,6 +48,10 @@ Here are some optional parameters for creating a more cumbersome meeting.
 
 `-t 2023-11-09/12:30`
 
+- Set When to start the meeting, it is in the format of %H:%M.
+
+`-t 12:30`
+
 - Set When to start the meeting, a few hours later.
 
 `-t 1h`
