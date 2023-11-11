@@ -36,7 +36,7 @@ def main():
         "subject": str(base64.b64encode(default_meeting_name.encode('utf-8')).decode('ascii')),
         "media_set_type": "0",
         "allow_unmute_by_self": "1",
-        "create_type": "1"
+        # "create_type": "1"
     }
 
     has_password = False
