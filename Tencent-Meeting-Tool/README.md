@@ -59,3 +59,13 @@ Here are some optional parameters for creating a more cumbersome meeting.
 - Set When to start the meeting, a few minutes later.
 
 `-t 30m`
+
+### Quick view meeting
+
+Just type `vm`.
+
+Pressing Back will take you to your browser to view meeting details.
+
+### Quick cancel meeting
+
+First view the meeting information through the `vm` command, Then cancel the meeting with `command + enter`.
