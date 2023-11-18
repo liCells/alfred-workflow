@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
 import requests
+import datetime
 import time
 import json
 import sys
 import base64
+import os
 
 now = time.time()
 
@@ -16,18 +18,25 @@ def parse_time(time_str):
             return int(now) + int(time_str[:-1]) * 60
         if time_str[-1] == "h":
             return int(now) + int(time_str[:-1]) * 60 * 60
+
+        today = datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+        today_str = today.strftime("%Y-%m-%d")
+
         if len(time_str) > 2:
-            if len(time_str) == 3:
-                return int(time.mktime(time.strptime(time_str, "%H:")))
-            return int(time.mktime(time.strptime(time_str, "%H:%M")))
-        return int(time.mktime(time.strptime(time_str, "%H")))
+            return int(time.mktime(time.strptime(today_str + " " + time_str, "%Y-%m-%d %H:%M")))
+        return int(time.mktime(time.strptime(today_str + " " + time_str, "%Y-%m-%d %H")))
 
 # python3 main.py "cookie" -n meeting_name -p password -m 30 -t 2023-11-09/12:30
 # python3 main.py "cookie" -n meeting_name -p password -m 30 -t 12:30
 # python3 main.py "cookie" -n meeting_name -p password -m 30 -t 1h
 def main():
-    default_meeting_name = str(sys.argv[2])
-    end_time = int(30) * 60
+    cookies = get_cookies()
+    if not cookies.strip():
+        print("not_login", end="")
+        return
+
+    default_meeting_name = str(sys.argv[1])
+    end_time = 1800
 
     data = {
         "begin_time": int(now),
@@ -42,11 +51,11 @@ def main():
     has_password = False
     password = ""
 
-    if len(sys.argv) > 3:
-        for i in range(3, len(sys.argv), 2):
+    if len(sys.argv) > 2:
+        for i in range(2, len(sys.argv), 2):
             if sys.argv[i] == "-m":
                 end_time = int(sys.argv[i + 1]) * 60
-                data["end_time"] = str(data["begin_time"] + end_time)
+                data["end_time"] = str((int(data["begin_time"]) + end_time))
             elif sys.argv[i] == "-t":
                 start_time = parse_time(sys.argv[i + 1])
                 data["begin_time"] = str(start_time)
@@ -73,7 +82,7 @@ def main():
         url="https://meeting.tencent.com/wemeet-tapi/wemeet/manage_service/personal/v1/schedule_rapid_meeting",
         params=params,
         headers={
-            "Cookie": str(sys.argv[1]),
+            "Cookie": cookies,
             "Content-Type": "application/json; charset=utf-8",
         },
         data=json.dumps(data)
@@ -86,7 +95,19 @@ def main():
             print("password: " + str(password))
         print("join url: " + str(base64.b64decode(res["url"]).decode('ascii')), end="")
     else:
-        print("error")
+        print("error", end="")
+
+def get_cookies():
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+    temp_file_path = os.path.join(script_dir, "cookies")
+    if not os.path.exists(temp_file_path):
+        return ""
+    if os.path.getsize(temp_file_path) == 0:
+        return ""
+    # 读取并解析文件内容
+    with open(temp_file_path, "r") as file:
+        cookies = file.read()
+    return cookies
 
 if __name__ == "__main__":
     main()
