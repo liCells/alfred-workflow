@@ -1,16 +1,14 @@
 # Tencent Meeting Tool
 
-## Get cookie
-
-First you need to get the login cookie.
-
-Log in at the URL below [qrcode-login](https://meeting.tencent.com/qrcode-login.html).
-
-After login, open the console or find the corresponding value in the browser's cookie and copy it.
-
-Just set the cookie value to the environment variable.
+Quickly join, create or cancel a meeting with Tencent Meeting.
 
 ## Usage
+
+### Login
+
+Enter `lm`, and press `shift` to display the login QR code.
+
+After scanning, press enter to monitor whether the login succeeds in real time.
 
 ### Quick join
 

@@ -18,4 +18,4 @@
 
 ### [Tencent Meeting Tool](https://github.com/liCells/alfred-workflow/tree/main/Tencent-Meeting-Tool)
 
-> Quick operation of Tencent meetings.
+> Quickly join, create or cancel a meeting with Tencent Meeting.
