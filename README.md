@@ -8,7 +8,7 @@
 
 > The local docker management tool.
 
-### [hosts manager](https://github.com/liCells/alfred-workflow/tree/main/hosts-manager)
+### [Hosts Manager](https://github.com/liCells/alfred-workflow/tree/main/hosts-manager)
 
 > Manage your hosts file.
 
