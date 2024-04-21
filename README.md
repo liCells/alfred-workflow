@@ -1,21 +1,33 @@
 # alfred-workflow
 
-### [Notion AI](https://github.com/liCells/alfred-workflow/tree/main/notion-ai)
+### [Brew Services](https://github.com/liCells/alfred-workflow/tree/main/brew-services)
 
-> Use Notion AI anywhere.
+> The brew services management tool.
+
+### [Docker](https://github.com/liCells/alfred-workflow/tree/main/docker)
+
+> The local docker management tool.
 
 ### [hosts manager](https://github.com/liCells/alfred-workflow/tree/main/hosts-manager)
 
 > Manage your hosts file.
 
-### [Switch Audio](https://github.com/liCells/alfred-workflow/tree/main/Switch-Audio)
-
-> Switch audio devices quickly.
-
 ### [IP address](https://github.com/liCells/alfred-workflow/tree/main/ip-address)
 
 > Get ip address quickly.
 
-### [Tencent Meeting Tool](https://github.com/liCells/alfred-workflow/tree/main/Tencent-Meeting-Tool)
+### [Notion AI](https://github.com/liCells/alfred-workflow/tree/main/notion-ai)
+
+> Use Notion AI anywhere.
+
+### [Svgl](https://github.com/liCells/alfred-workflow/tree/main/svgl)
+
+> The svg download tool.
+
+### [Switch Audio](https://github.com/liCells/alfred-workflow/tree/main/switch-audio)
+
+> Switch audio devices quickly.
+
+### [Tencent Meeting Tool](https://github.com/liCells/alfred-workflow/tree/main/tencent-meeting-tool)
 
 > Quickly join, create or cancel a meeting with Tencent Meeting.
