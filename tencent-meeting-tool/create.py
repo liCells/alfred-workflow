@@ -36,6 +36,8 @@ def main():
         return
 
     default_meeting_name = str(sys.argv[1])
+    meeting_result = str(sys.argv[2])
+    password_prompt_prefix = str(sys.argv[3])
     end_time = 1800
 
     data = {
@@ -51,8 +53,8 @@ def main():
     has_password = False
     password = ""
 
-    if len(sys.argv) > 2:
-        for i in range(2, len(sys.argv), 2):
+    if len(sys.argv) > 4:
+        for i in range(4, len(sys.argv), 2):
             if sys.argv[i] == "-m":
                 end_time = int(sys.argv[i + 1]) * 60
                 data["end_time"] = str((int(data["begin_time"]) + end_time))
@@ -90,10 +92,30 @@ def main():
 
     if response.status_code == 200:
         res = response.json()
-        print("code: " + str(res["meeting_code"]))
+
+        bt_object = datetime.datetime.fromtimestamp(data["begin_time"])
+
+        formatted_bt_date = bt_object.strftime('%Y-%m-%d %H:%M')
+
+        et_object = datetime.datetime.fromtimestamp(data["end_time"])
+
+        formatted_et_date = et_object.strftime('%Y-%m-%d %H:%M')
+        if formatted_et_date[:10] == formatted_bt_date[:10]:
+            formatted_et_date = et_object.strftime('%H:%M')
+
+        variables = {
+            "subject": str(base64.b64decode(data["subject"]).decode('ascii')),
+            "meeting_code": res["meeting_code"],
+            "url": str(base64.b64decode(res["url"]).decode('ascii')),
+            "password": password,
+            "begin_time": formatted_bt_date,
+            "end_time": formatted_et_date,
+        }
+        print(meeting_result.format(**variables))
+#         print("code: " + str(res["meeting_code"]))
         if has_password:
-            print("password: " + str(password))
-        print("join url: " + str(base64.b64decode(res["url"]).decode('ascii')), end="")
+            print(password_prompt_prefix.format(password=password), end="")
+#         print("join url: " + str(base64.b64decode(res["url"]).decode('ascii')), end="")
     else:
         print("error", end="")
 
