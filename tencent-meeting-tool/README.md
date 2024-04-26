@@ -67,3 +67,24 @@ Pressing Back will take you to your browser to view meeting details.
 ### Quick cancel meeting
 
 First view the meeting information through the `vm` command, Then cancel the meeting with `command + enter`.
+
+### Custom create meeting result content
+
+You can set the return value after creating a meeting through the `Meeting information` variable.
+
+#### Below is an example
+
+> meeting subject: {subject}
+> 
+> code: {meeting_code}
+> 
+> join url: {url}
+
+#### available variables
+
+- `{subject}` -> Meeting name
+- `{begin_time}` -> meeting start time
+- `{end_time}` -> meeting end time
+- `{url}` -> Meeting link
+- `{meeting_code}` -> meeting code
+
