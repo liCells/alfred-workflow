@@ -62,7 +62,11 @@ Here are some optional parameters for creating a more cumbersome meeting.
 
 Just type `vm`.
 
-Pressing Back will take you to your browser to view meeting details.
+Press `Enter` to quickly enter the meeting.
+
+Press `Command + Enter` will cancel the meeting.
+
+Press `Shift + Enter` will take you to your browser to view meeting details.
 
 ### Quick cancel meeting
 
