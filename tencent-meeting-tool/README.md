@@ -18,6 +18,10 @@ Just enter 'jm' and the conference code, for example:
 
 `jm 111111111`
 
+Even if you enter a paragraph of text, the corresponding meeting number can be automatically extracted, if there is more than one meeting number, a list will be displayed, and you can press enter to enter the meeting. For example:
+
+`jm meeting code: 111-111-111`
+
 ### Quick create meeting
 
 #### Create quick meeting
@@ -62,11 +66,13 @@ Here are some optional parameters for creating a more cumbersome meeting.
 
 Just type `vm`.
 
-Press `Enter` to quickly enter the meeting.
+Press `Enter` to enter the meeting.
 
-Press `Command + Enter` will cancel the meeting.
+Press `Option+Enter` to copy the meeting-related information.
 
-Press `Shift + Enter` will take you to your browser to view meeting details.
+Press `Shift+Enter` to copy the meeting-related information.
+
+Press `Command+Enter` to cancel the meeting.
 
 ### Quick cancel meeting
 
