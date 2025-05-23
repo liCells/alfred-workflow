@@ -31,3 +31,8 @@
 ### [Tencent Meeting Tool](https://github.com/liCells/alfred-workflow/tree/main/tencent-meeting-tool)
 
 > Quickly join, create or cancel a meeting with Tencent Meeting.
+
+### [ZeroTier Control](https://github.com/liCells/alfred-workflow/tree/main/zerotier)
+
+> View basic information about ZeroTier and control member permissions.
+
